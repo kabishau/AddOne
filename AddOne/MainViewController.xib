@@ -19,6 +19,7 @@
                 <outlet property="inputField" destination="ao7-0r-6mb" id="ce6-XJ-dkv"/>
                 <outlet property="numberLabel" destination="5QB-DD-BBU" id="MVX-l5-CLd"/>
                 <outlet property="scoreLabel" destination="4cg-sp-Ydf" id="sa1-md-nSW"/>
+                <outlet property="timerLabel" destination="vva-Tb-3wW" id="3SQ-mv-fiR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

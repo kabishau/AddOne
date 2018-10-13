@@ -3,14 +3,15 @@ import MBProgressHUD
 
 class MainViewController: UIViewController {
     
-    var hud: MBProgressHUD?
-    
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var inputField: UITextField!
+    @IBOutlet weak var timerLabel: UILabel!
 
-    // score variable
+    var hud: MBProgressHUD?
     var score: Int = 0
+    var timer: Timer?
+    var gameTime: Int = 60
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +69,12 @@ class MainViewController: UIViewController {
                 score -= 1
             }
         }
+        
+        // this allows to set timer at the beginning of the game and don't reset it every time when new answer is given, it will be set to nil at end of the game
+        if timer == nil {
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onUpdateTimer), userInfo: nil, repeats: true)
+        }
+        
         updateNumberLabel()
         updateScoreLabel()
     }
@@ -91,6 +98,31 @@ class MainViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 self.hud?.hide(animated: true)
                 self.inputField.text = ""
+            }
+        }
+    }
+    
+    func updateTimeLabel() {
+        if timerLabel != nil {
+            let min: Int = (gameTime / 60) % 60
+            let sec: Int = gameTime % 60
+            
+            let min_p: String = String(format: "%02d", min)
+            let sec_p: String = String(format: "%02d", sec)
+            
+            timerLabel.text = "\(min_p):\(sec_p)"
+        }
+    }
+    
+    @objc func onUpdateTimer() {
+        
+        if gameTime > 0 && gameTime <= 60 {
+            gameTime -= 1
+            updateTimeLabel()
+        } else if gameTime == 0 {
+            if timer != nil {
+                timer?.invalidate()
+                timer = nil
             }
         }
     }
