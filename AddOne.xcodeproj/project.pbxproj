@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		647F602D795C74EC5951E615 /* Pods_AddOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5449CAC5BB438D1E0D648B4F /* Pods_AddOne.framework */; };
 		6B01BA8121714BEA00B68D6B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B01BA7F21714BEA00B68D6B /* MainViewController.swift */; };
 		6B01BA8221714BEA00B68D6B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B01BA8021714BEA00B68D6B /* MainViewController.xib */; };
+		6B686D962172585E00E87E90 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6B686D952172585E00E87E90 /* Podfile */; };
 		6B8E90172170EBB20061749A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E90162170EBB20061749A /* AppDelegate.swift */; };
 		6B8E901E2170EBB40061749A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E901D2170EBB40061749A /* Assets.xcassets */; };
 		6B8E90212170EBB40061749A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E901F2170EBB40061749A /* LaunchScreen.storyboard */; };
@@ -16,8 +18,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A718AF8E4CA08B500E080E9 /* Pods-AddOne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddOne.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AddOne/Pods-AddOne.debug.xcconfig"; sourceTree = "<group>"; };
+		482099EA6419B624CA20AEFB /* Pods-AddOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddOne.release.xcconfig"; path = "Pods/Target Support Files/Pods-AddOne/Pods-AddOne.release.xcconfig"; sourceTree = "<group>"; };
+		5449CAC5BB438D1E0D648B4F /* Pods_AddOne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AddOne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B01BA7F21714BEA00B68D6B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6B01BA8021714BEA00B68D6B /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		6B686D952172585E00E87E90 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		6B686D9721725D9400E87E90 /* AddOne-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AddOne-Bridging-Header.h"; sourceTree = "<group>"; };
 		6B8E90132170EBB20061749A /* AddOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B8E90162170EBB20061749A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B8E901D2170EBB40061749A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,17 +38,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				647F602D795C74EC5951E615 /* Pods_AddOne.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		310FD46231C6C8D1A2302E3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5449CAC5BB438D1E0D648B4F /* Pods_AddOne.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6B8E900A2170EBB20061749A = {
 			isa = PBXGroup;
 			children = (
+				6B686D9721725D9400E87E90 /* AddOne-Bridging-Header.h */,
+				6B686D952172585E00E87E90 /* Podfile */,
 				6B8E90152170EBB20061749A /* AddOne */,
 				6B8E90142170EBB20061749A /* Products */,
+				F537708D7D3DEA325920B9EA /* Pods */,
+				310FD46231C6C8D1A2302E3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +87,15 @@
 			path = AddOne;
 			sourceTree = "<group>";
 		};
+		F537708D7D3DEA325920B9EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A718AF8E4CA08B500E080E9 /* Pods-AddOne.debug.xcconfig */,
+				482099EA6419B624CA20AEFB /* Pods-AddOne.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +103,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B8E90252170EBB40061749A /* Build configuration list for PBXNativeTarget "AddOne" */;
 			buildPhases = (
+				8C1FB05BA72B01989F0DB89F /* [CP] Check Pods Manifest.lock */,
 				6B8E900F2170EBB20061749A /* Sources */,
 				6B8E90102170EBB20061749A /* Frameworks */,
 				6B8E90112170EBB20061749A /* Resources */,
+				FBAD698D8730F63748654373 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B686D962172585E00E87E90 /* Podfile in Resources */,
 				6B8E90292170ED1B0061749A /* HVD_Comic_Serif_Pro.otf in Resources */,
 				6B8E90212170EBB40061749A /* LaunchScreen.storyboard in Resources */,
 				6B01BA8221714BEA00B68D6B /* MainViewController.xib in Resources */,
@@ -133,6 +165,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8C1FB05BA72B01989F0DB89F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AddOne-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBAD698D8730F63748654373 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AddOne/Pods-AddOne-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AddOne/Pods-AddOne-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6B8E900F2170EBB20061749A /* Sources */ = {
@@ -276,6 +347,7 @@
 		};
 		6B8E90262170EBB40061749A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A718AF8E4CA08B500E080E9 /* Pods-AddOne.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +359,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kabishau.AddOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AddOne-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -294,6 +367,7 @@
 		};
 		6B8E90272170EBB40061749A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 482099EA6419B624CA20AEFB /* Pods-AddOne.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -305,6 +379,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kabishau.AddOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AddOne-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

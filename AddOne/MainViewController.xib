@@ -16,6 +16,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="AddOne" customModuleProvider="target">
             <connections>
+                <outlet property="inputField" destination="ao7-0r-6mb" id="ce6-XJ-dkv"/>
+                <outlet property="numberLabel" destination="5QB-DD-BBU" id="MVX-l5-CLd"/>
+                <outlet property="scoreLabel" destination="4cg-sp-Ydf" id="sa1-md-nSW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,7 +37,7 @@
                         <constraint firstAttribute="width" constant="149" id="RwW-zz-ivm"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cg-sp-Ydf">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cg-sp-Ydf">
                     <rect key="frame" x="61" y="32" width="47" height="27"/>
                     <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="22"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -115,9 +118,9 @@ So 1234 becomes 2345.</string>
     </objects>
     <resources>
         <image name="background" width="375" height="667"/>
-        <image name="input" width="256" height="109.5"/>
-        <image name="number" width="302.5" height="129"/>
-        <image name="score" width="149" height="50.5"/>
-        <image name="time" width="149" height="50.5"/>
+        <image name="input" width="256" height="109"/>
+        <image name="number" width="302" height="129"/>
+        <image name="score" width="149" height="50"/>
+        <image name="time" width="149" height="50"/>
     </resources>
 </document>
